@@ -1,0 +1,217 @@
+
+:root {
+    --background-blue: #36384d;
+    --container-color: #ffffff;
+    --title-color: #232846;
+    --text-color: #454751;
+}
+
+@font-face {
+    font-family: "Roboto";
+    src: url(resources/fonts/Roboto-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'Roboto Bold';
+    src: url(resources/fonts/Roboto-Bold.ttf);
+}
+
+* {
+    font-family: 'Roboto';
+}
+
+
+body {
+    height: 100vh;
+    background-color: var(--background-blue);
+}
+
+.newsletter-container {
+    position: relative;
+    width: 50%;
+    height: 45%;
+    background-color: var(--container-color);
+    border-radius: 20px;
+    margin: 0 auto;
+    
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.newsletter-left {
+    display: inline-block;
+    height: 100%;
+    width: 50%;
+    position: relative;
+}
+
+.newsletter-right {
+
+    position: absolute;
+    display: inline-block;
+    width: 50%;
+    height: 100%;
+    top: 25px;
+    background-image: url(resources/images/illustration-sign-up-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: 100% 90%;
+    transition: all .2s ease-out;
+}
+
+
+
+.newsletter-updated {
+    font-family: 'Roboto Bold';
+    font-size: 2.5rem;
+    color: var(--title-color);
+    margin: 15% auto;
+    margin-top: 15%;
+    margin-bottom: 5%;
+    text-align: center;
+}
+
+.newsletter-join-msg {
+    font-size: .8rem;
+    margin-left: 15%;
+}
+
+.updates-list {
+    list-style: none;
+    font-size: .8rem;
+    margin-left: 15%;
+   
+}
+.updates-list li {
+    position: relative;
+    margin-bottom: 3%;
+    color: var(--text-color);
+}
+
+
+.updates-list li::before{
+    content: '';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: -12%;
+    background-image: url(resources/images/icon-list.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 16px;
+    height: 16px;
+
+}
+
+
+.pseudo-form {
+    width: 100%;
+    height: 45%;
+    position: absolute;
+    left: 0;
+    top: 55%;
+    
+}
+
+label.email-entry-label {
+    color: var(--text-color);
+    font-size: .7rem;
+    font-family: 'Roboto Bold';
+    margin-left: 15%;
+}
+
+h4.error-message {
+    position: absolute;
+    right: 0;
+    top: -8%;
+    font-size: .7rem;
+    color: #d28f89;
+    visibility: hidden;
+}
+
+input#email-entry {
+    margin-left: 15%;
+    margin-top: 3%;
+
+    width: 80%;
+    height: 18%;
+    padding-left: 10px;
+    border-radius: 5px;
+    outline: none;
+    border: 2px solid #f0f0f0;
+    transition: all .3s linear;
+
+}
+
+input#email-entry:focus {
+    border: 2px solid #232846;
+}
+
+.error-email-entry {
+    color: #e9a29d !important;
+    background-color: #ffe8e6 !important;
+
+    border: 2px solid #ecbeb8 !important;
+}
+
+.error-email-entry:focus {
+    border: 2px solid #d78175 !important;
+}
+
+button.gradient-newsletter-button {
+    font-family: Roboto Bold;
+    color: white;
+    background-color: #252643;
+    border: none;
+    border-radius: 5px;
+    position: relative;
+    z-index: 1;
+    transition: transform .1s ease-out;
+
+    
+}
+
+button.subscribe-newsletter {
+    display: inline-block;
+    padding-left: 10px; 
+    margin-left: 15%;
+    margin-top: 5%;
+    width: 84%;
+    height: 25%;
+}
+button.gradient-newsletter-button:hover {
+    transform: scale(1.1);
+}
+button.gradient-newsletter-button::before{
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    z-index: -10;
+    top: 10px;
+    background: linear-gradient(-45deg, #ff6639, #dc5c7a);
+    filter: blur(10px);
+    opacity: 0;
+    transition: opacity .3s linear;
+}
+button.gradient-newsletter-button:hover::before {
+    opacity: 1;
+}
+button.gradient-newsletter-button::after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    position: absolute;
+    top: 0;
+    z-index: -1;
+    left: 0;
+    background: linear-gradient(-45deg, #ff6639, #dc5c7a);
+    opacity: 0;
+    transition: opacity .3s linear;
+}
+
+button.gradient-newsletter-button:hover:after {
+    opacity: 1;
+}

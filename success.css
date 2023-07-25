@@ -1,0 +1,45 @@
+
+* {
+    margin-left: 50px;
+}
+.success-container {
+    width: 400px;
+    height: 400px;
+    background: white;
+    margin: 0 auto;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 20px;
+    box-shadow: 1px 10px 10px rgb(43, 43, 43);
+}
+
+.check-mark {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    background: url(resources/images/icon-success.svg);
+    background-size: contain;
+    background-position: center;
+    margin-left: 50px;
+    margin-top: 30px;
+}
+
+h2.thanks-message {
+    font-family: Roboto Bold;
+    font-size: 2.5rem;
+}
+
+p.confirmation-message {
+    font-size: .85rem;
+} 
+span.email-thanking {
+    font-family: Roboto Bold;
+    margin-left: 0;
+}
+
+.button-dismiss-msg {
+    width: 300px;
+    height: 45px;
+    margin-top: 20px;
+}
